@@ -8,7 +8,7 @@ tasks:
 
   - name: run front-end
     init: cd client && npm install
-    command: cd client && npm start
+    command: npm start
 
 ports:
   - port: 3000
