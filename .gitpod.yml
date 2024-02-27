@@ -2,16 +2,13 @@ image: gitpod/workspace-postgres
 
 tasks:
   - name: run back-end
+    before: npm install pg dotenv
     init: npm install
     command: npm start
+
   - name: run front-end
     init: cd client && npm install
-    command: npm start
-  - name: database
-    init: >
-      npm install pg
-      npm install dotenv
-
+    command: cd client && npm start
 
 ports:
   - port: 3000
